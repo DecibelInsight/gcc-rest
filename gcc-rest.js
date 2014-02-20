@@ -49,6 +49,13 @@ GccRest.prototype = {
     },
 
     /**
+     * Clears the JS buffer to allow next file to be processed.
+     */
+    startNewBatch: function () {
+        this._reqParam.js_code = '';
+    },
+
+    /**
      * Set a Google Closure Compiler request parameter.
      * @param {string} setting
      * @param {string|Array} value
